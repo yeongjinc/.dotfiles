@@ -1,11 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/zsh/.oh-my-zsh
 
+export LANG=ko_KR.UTF-8
+export LC_CTYPE=ko_KR.UTF-8
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="yujun"
+ZSH_THEME="yeongjin"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,13 +47,13 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby rails osx autojump python pip github gnu-utils history-substring-search zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/.rvm/gems/ruby-2.1.2/bin:$HOME/.rvm/gems/ruby-2.1.2@global/bin:$HOME/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$HOME/.rvm/bin"
+export PATH="/Users/yeongjin/.rbenv/bin:/Users/yeongjin/.opam/system/bin:/opt/homebrew-cask/Caskroom/coqide/8.4pl5/CoqIDE_8.4pl5.app/Contents/MacOS:/usr/local/share/python:/usr/local/bin:/Users/yeongjin/.rvm/gems/ruby-2.1.2/bin:/Users/yeongjin/.rvm/gems/ruby-2.1.2@global/bin:/Users/yeongjin/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/yeongjin/.rvm/bin:/Users/yeongjin/go/bin:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -100,15 +102,7 @@ alias shortcuts='cat ~/.dotfiles/vim/doc/shortcuts.txt | less'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
-alias ser='ssh -i ~/.ssh/hi_id_rsa 128.199.107.14'
-alias mar='ssh plmmoknn@martini.snucse.org'
-alias cdser='cd ~/Dropbox/server'
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=/usr/local/share/python:/usr/local/bin:$PATH
 export PATH=/opt/homebrew-cask/Caskroom/coqide/8.4pl5/CoqIDE_8.4pl5.app/Contents/MacOS:$PATH
 
-
-# OPAM configuration
-. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"

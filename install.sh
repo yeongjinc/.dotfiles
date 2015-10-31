@@ -15,7 +15,7 @@ vim +PluginInstall +qall
 echo "vim | end"
 
 echo "tmux | start"
-echo "tmux | tmux SHOULD install YOURSELF"
+echo "tmux | SHOULD install tmux YOURSELF"
 echo "tmux | just link tmux.conf"
 ln -i ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
@@ -25,8 +25,8 @@ echo "zsh | start"
 echo "zsh | clone oh-my-zsh"
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/.dotfiles/zsh/.oh-my-zsh sh
 
-echo "zsh | link yujun.zsh-theme"
-ln -i ~/.dotfiles/zsh/yujun.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/yujun.zsh-theme
+echo "zsh | link yeongjin.zsh-theme"
+ln -i ~/.dotfiles/zsh/yeongjin.zsh-theme ~/.dotfiles/zsh/.oh-my-zsh/themes/yeongjin.zsh-theme
 
 echo "zsh | link zshrc"
 ln -i ~/.dotfiles/zsh/.zshrc ~/.zshrc
