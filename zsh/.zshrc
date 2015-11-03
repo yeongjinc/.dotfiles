@@ -106,3 +106,10 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=/usr/local/share/python:/usr/local/bin:$PATH
 export PATH=/opt/homebrew-cask/Caskroom/coqide/8.4pl5/CoqIDE_8.4pl5.app/Contents/MacOS:$PATH
 
+fg() {
+	if [[ $# -eq 1 && $1 = - ]]; then
+		builtin fg %-
+	else
+		builtin fg %"$@"
+	fi
+}
