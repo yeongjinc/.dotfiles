@@ -28,5 +28,5 @@ PROMPT="\
 %{$terminfo[bold]$fg[blue]%}%#%{$reset_color%} \
 %{$fg[white]%}[%*]\
 ${git_info} \
-%{$terminfo[bold]$fg[cyan]%}%~%{$reset_color%} \
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+%{$fg[cyan]%}%~%{$reset_color%} \
+%{$fg[red]%}$ %{$reset_color%}"
