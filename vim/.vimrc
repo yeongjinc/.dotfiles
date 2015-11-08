@@ -209,7 +209,8 @@ else
 endif
 
 " 자동 줄바꿈 안함
-set nowrap
+"set nowrap
+set wrap
 
 " 마지막 편집 위치 복원 기능
 au BufReadPost *

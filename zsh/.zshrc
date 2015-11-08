@@ -113,3 +113,9 @@ fg() {
 		builtin fg %"$@"
 	fi
 }
+
+# for tmux powerline pwd
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+# maintain tmux window name
+DISABLE_AUTO_TITLE=true
