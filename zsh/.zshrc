@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/yeongjin/.rbenv/bin:/Users/yeongjin/.opam/system/bin:/opt/homebrew-cask/Caskroom/coqide/8.4pl5/CoqIDE_8.4pl5.app/Contents/MacOS:/usr/local/share/python:/usr/local/bin:/Users/yeongjin/.rvm/gems/ruby-2.1.2/bin:/Users/yeongjin/.rvm/gems/ruby-2.1.2@global/bin:/Users/yeongjin/.rvm/rubies/ruby-2.1.2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/yeongjin/.rvm/bin:/Users/yeongjin/go/bin:/usr/local/go/bin"
+export PATH="/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,12 +99,7 @@ alias memo='cd ~/memo ; vim'
 alias rmvim='rm -rf ~/.dotfiles/vim/tmp/swap/*'
 alias shortcuts='cat ~/.dotfiles/vim/doc/shortcuts.txt | less'
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/go/bin
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-export PATH=/usr/local/share/python:/usr/local/bin:$PATH
-export PATH=/opt/homebrew-cask/Caskroom/coqide/8.4pl5/CoqIDE_8.4pl5.app/Contents/MacOS:$PATH
 
 fg() {
 	if [[ $# -eq 1 && $1 = - ]]; then

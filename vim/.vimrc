@@ -72,6 +72,10 @@ Bundle 'elzr/vim-json'
 Bundle 'pangloss/vim-javascript'
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'scrooloose/syntastic'
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+" TODO
+
 Bundle 'ntpeters/vim-better-whitespace'
 autocmd BufWritePre <buffer> StripWhitespace
 
@@ -89,6 +93,9 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:loaded_youcompleteme = 1
+nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_confirm_extra_conf = 0
 
 " NerdTree
 Bundle 'scrooloose/nerdtree'
@@ -221,9 +228,6 @@ au BufReadPost *
 " search like modern browsers
 set incsearch
 
-" show matching brackets
-set showmatch
-
 " 괄호짝 찾기 기능에 사용자 괄호 종류를 더한다.
 set mps+=<:>
 
@@ -247,7 +251,7 @@ vmap <S-Tab> <gv
 set virtualedit=onemore
 
 " Spell checking
-set spell
+"set spell
 
 "" Search
 " Highlight search result
@@ -415,6 +419,15 @@ filetype indent on
 
 " Don't redraw while executing macros (performance)
 set lazyredraw
+
+" 느린 거 해결 노력
+set ttyfast ttymouse=xterm2 ttyscroll=3
+set mouse=niv
+
+" show matching brackets
+set noshowmatch
+set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
+
 
 " 프로그램 시작시 플러그인 로드
 set lpl

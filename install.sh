@@ -16,6 +16,7 @@ echo "vim | end"
 
 echo "tmux | start"
 echo "tmux | SHOULD install tmux YOURSELF"
+echo "tmux | reattach-to-user-namespace, too"
 echo "tmux | just link tmux.conf"
 ln -i ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
