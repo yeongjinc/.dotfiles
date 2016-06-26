@@ -33,3 +33,4 @@ echo "zsh | link zshrc"
 ln -i ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
 echo "zsh | end"
+
