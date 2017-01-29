@@ -18,7 +18,7 @@ let mapleader = " "
 let g:mapleader = " "
 
 " W sudo saves the file
-command W w !sudo tee % > /dev/null
+command SW w !sudo tee % > /dev/null
 
 " Encoding
 set fenc=utf-8
@@ -38,8 +38,10 @@ call vundle#rc("~/.dotfiles/vim/bundle")
 
 Bundle 'gmarik/Vundle.vim'
 
+" faster ack
 Bundle 'rking/ag.vim'
 
+" theme
 Bundle 'altercation/vim-colors-solarized'
 if filereadable(expand("~/.dotfiles/vim/bundle/vim-colors-solarized/colors/solarized.vim"))
   let g:solarized_termcolors=256
@@ -54,7 +56,7 @@ endif
 "let g:indent_guides_guide_size = 1
 "let g:indent_guides_enable_on_vim_startup = 1
 
-" %s highlight
+" highlight on %s, doesn't work
 Bundle 'osyo-manga/vim-over'
 " Move easily
 Bundle 'easymotion/vim-easymotion'
@@ -74,28 +76,27 @@ Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 " nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-" TODO
 
 Bundle 'ntpeters/vim-better-whitespace'
 autocmd BufWritePre <buffer> StripWhitespace
 
-" snipMate
-Bundle 'ervandew/supertab'
-Bundle 'SirVer/ultisnips'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'honza/vim-snippets'
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_use_ultisnips_completer = 1
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:loaded_youcompleteme = 1
-nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_confirm_extra_conf = 0
+"" Auto Completion, temporarily disable for interview
+"Bundle 'ervandew/supertab'
+"Bundle 'SirVer/ultisnips'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'honza/vim-snippets'
+"" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_use_ultisnips_completer = 1
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+"" better key bindings for UltiSnipsExpandTrigger
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:loaded_youcompleteme = 1
+"nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_confirm_extra_conf = 0
 
 " NerdTree
 Bundle 'scrooloose/nerdtree'
@@ -300,8 +301,7 @@ highlight clear LineNr
 "" Indent
 set autoindent
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2 shiftwidth=2 expandtab
 
 
 "" Backup, Undo
